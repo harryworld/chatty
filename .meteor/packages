@@ -11,3 +11,4 @@ coffeescript
 accounts-base
 accounts-password
 foundation
+iron-router
