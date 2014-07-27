@@ -2,4 +2,6 @@ Router.configure
   layoutTemplate: 'layout'
 
 Router.map ->
-  @route 'login'
+  @route 'login',
+    path: '/'
+    layoutTemplate: 'blank_layout'
