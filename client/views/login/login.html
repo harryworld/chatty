@@ -2,10 +2,16 @@
   <div id="login" class="accounts">
     <h1>Chatty</h1>
 
-    <form action="#" id="login-form" class="accounts-form">
-      <input type="email" id="account-email" placeholder="email">
+    <form action="#" id="login-form" class="accounts-form centered-form">
+      <input type="email" id="account-email" placeholder="email" autofocus>
       <input type="password" id="account-password" placeholder="password">
       <input type="submit" value="Login">
     </form>
+
+    <div class="other-links centered-form">
+      <a href="{{ pathFor 'register' }}">Sign up</a>
+      <a href="{{ pathFor 'resetPassword' }}">Forgot Password?</a>
+    </div>
+
   </div>
 </template>
