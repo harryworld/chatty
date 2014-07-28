@@ -20,7 +20,7 @@ requireLogin = (pause) ->
     if Meteor.loggingIn()
       this.render(this.loadingTemplate)
     else
-      this.render('accessDenied')
+      this.render('login')
 
     pause()
 
