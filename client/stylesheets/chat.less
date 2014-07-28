@@ -56,3 +56,45 @@
     border-bottom: 1px solid fade(white, 50%);
   }
 }
+
+#logout {
+  background: darken(@teal, 10%);
+
+  &:hover {
+    color: @red;
+  }
+}
+
+#chat_box {
+  background: darken(@teal, 10%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+
+  form {
+    padding: 0;
+    margin: 0;
+  }
+
+  input {
+    display: inline;
+  }
+
+  #message {
+    width: 80%;
+    margin: 0;
+    border: 0;
+  }
+
+  input[type=submit] {
+    width: 18%;
+    padding: 11px;
+    margin-left: 3px;
+    border: 0;
+    background: @red;
+    font-size: 0.8em;
+    color: white;
+  }
+}
