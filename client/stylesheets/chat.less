@@ -1,0 +1,58 @@
+@import url('color.lessimport');
+
+@meColor: saturate(@darkRed, 20%);
+@otherColor: fade(@red, 100%);
+
+#messages {
+  padding: 10px;
+}
+
+.message {
+  width: 90%;
+  float: left;
+  background: @otherColor;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  position: relative;
+
+  &.me {
+    background: @meColor;
+    float: right;
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      border-top: 15px solid transparent;
+      border-left: 10px solid @meColor;
+      display: block;
+      content: ' ';
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+
+  &:not(.me) {
+    &:before {
+      width: 20px;
+      height: 20px;
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      border-top: 15px solid transparent;
+      border-right: 10px solid @otherColor;
+    }
+  }
+
+  .name {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid fade(white, 50%);
+  }
+}

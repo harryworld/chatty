@@ -9,3 +9,5 @@ Router.map ->
   @route 'register',
     template: 'registration'
     layoutTemplate: 'blank_layout'
+
+  @route 'chat'
