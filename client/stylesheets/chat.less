@@ -71,11 +71,11 @@
 
 #chat_box {
   background: darken(@teal, 10%);
-  position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
   padding: 10px;
+  position: fixed;
+  right: 0;
 
   form {
     padding: 0;
@@ -84,21 +84,21 @@
 
   input {
     display: inline;
+    height: 45px;
   }
 
   #message {
-    width: 80%;
-    margin: 0;
     border: 0;
+    margin: 0;
+    width: 80%;
   }
 
   input[type=submit] {
-    width: 18%;
-    padding: 11px;
-    margin-left: 3px;
-    border: 0;
     background: @red;
-    font-size: 0.8em;
+    border: 0;
     color: white;
+    font-size: 0.8em;
+    margin-left: 3px;
+    width: 17%;
   }
 }
