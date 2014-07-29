@@ -12,7 +12,8 @@ Router.map ->
 
   @route 'chat'
 
-  @route 'resetPassword'
+  @route 'resetPassword',
+    layoutTemplate: 'blank_layout'
 
 requireLogin = (pause) ->
 
