@@ -1,42 +1,8 @@
 <template name="chat">
   <div id="chat">
-<!--     <div id="messages">
-      <div class="message me">
-        <div class="name">
-          Kulio
-        </div>
-        <div class="content">
-          Yo!
-        </div>
-      </div>
-      <div class="message">
-        <div class="name me">
-          Harry
-        </div>
-        <div class="content">
-          Yo back!
-        </div>
-      </div>
-      <div class="message">
-        <div class="name me">
-          Harry
-        </div>
-        <div class="content">
-          Wassup?
-        </div>
-      </div>
-    </div>
- -->
     <div class="messages">
       {{#each chatMessages }}
-        <div class="message">
-          <div class="name">
-            {{ user }}
-          </div>
-          <div class="content">
-            {{ content }}
-          </div>
-        </div>
+        {{> message }}
       {{/each}}
     </div>
   </div>
