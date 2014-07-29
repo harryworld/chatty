@@ -1,7 +1,7 @@
 @messagesRendered = 0
 
-createMessage = (user, content) ->
-  { user: user, content: content }
+createMessage = (userId, username, content) ->
+  { userId: userId, user: username, content: content }
 
 getUserName = (user) ->
   user.name || user.emails[0].address
@@ -18,8 +18,9 @@ Template.chat.events
 
     content = messageInput.value
     user = getUserName Meteor.user()
+    userId = Meteor.user()._id
 
-    message = createMessage(user, content)
+    message = createMessage(userId, user, content)
     Messages.insert message
 
     e.target.reset()
@@ -34,3 +35,7 @@ Template.message.rendered = ->
 
 Template.chat.helpers
   chatMessages: -> Messages.find({})
+
+Template.message.helpers
+  me: (message) ->
+    if Meteor.userId() == message.userId then "me"
